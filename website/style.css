@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*     background-image: url(./images/bg2.png); */
+    background-size: contain;
+    background-origin: center bottom;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgb(33, 38, 46);
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+}
+
+#app {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    color: rgb(205, 154, 104);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    overflow: hidden;
+}
+
+.holder.zip,
+.holder.feel {
+    margin-top: 5%;
+    width: 90%;
+}
+
+input#zip,
+textarea {
+    width: 100%;
+}
+textarea {
+    height: 250px;
+}
+
+#error {
+    color: rgba(255, 0, 0, 0.788);
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.entry {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#entryHolder {
+    width: 60%;
+    margin-top: 4%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-areas:
+        "temp city "
+        "feelings feelings "
+        "description date ";
+    justify-items: center;
+    align-items: center;
+}
+
+#temp {
+    grid-area: temp;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+#city {
+    grid-area: city;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+#content {
+    grid-area: feelings;
+    font-size: 35px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+#description {
+    grid-area: description;
+    font-size: 30px;
+    color: rgb(226, 183, 140);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(189, 123, 58);
+}
+#date {
+    grid-area: date;
+    font-size: 30px;
+    color: rgb(226, 183, 140);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(189, 123, 58);
+}
+
+.content {
+    width: 100vw;
+    margin-left: 5%;
+}
+
+.headline {
+    text-align: center;
+    font-size: 50px;
+    line-height: 70px;
+}
+#generate {
+}
+.title {
+}
+
+.content {
+    display: flex;
+}
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font-size: 24px;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 320px;
+
+    color: rgb(205, 154, 104);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+}
+
+button {
+    width: 90%;
+    height: 50px;
+    margin-top: 5%;
+    background: #3b4a6b;
+    color: rgb(228, 228, 228);
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    /*     box-shadow: 2px 4px 5px #444; */
+    border: none;
+    border-radius: 200px;
+}
+button:hover {
+    cursor: pointer;
+}
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    color: rgb(205, 154, 104);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+}
+#entryHolder,
+input,
+#feelings {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.219);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+#entry-data {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#feelings {
+    resize: none;
+
+    vertical-align: text-bottom;
+}
+#clouds1 {
+    position: absolute;
+    z-index: -1;
+    width: 800px;
+    bottom: -170px;
+    left: -50px;
+}
+#clouds2 {
+    position: absolute;
+    z-index: -1;
+    width: 800px;
+    bottom: -200px;
+}
+#clouds3 {
+    position: absolute;
+    z-index: -1;
+    width: 800px;
+    right: -50px;
+    bottom: -150px;
+    transform: rotateY(180deg);
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: rgb(205, 154, 104);
+    font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(205, 154, 104);
+    font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(205, 154, 104);
+    font-family: "Oswald", sans-serif;
+}
